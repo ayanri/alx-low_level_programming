@@ -1,9 +1,10 @@
 #include <stdio.h>
+
 /**
- * main - Entry point
- * Desciption - a program that prints the alphabet in lowercase, followed by a new line
- * Return: Always 0 (Success)
- */
+* main - Prints the alphabets in lowercase letters, except for e and q
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
 		char letter;
