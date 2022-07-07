@@ -1,23 +1,41 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * fizz_buzz - Prints to 100
+ * main - prints either numbers from 1 to 100
+ * or fizz or buzz or fizzBuzz
+ *
+ * Return: 0
  */
-
-void fizz_buzz(void)
+int main(void)
 {
-	int c;
+	int num;
 
-	for (c = 1; c < 100; c++)
+	while (num++ < 100)
 	{
-		if (c % 3 == 0 && c % 5 == 0)
-			printf("FizzBuzz");
-		else if (c % 3 == 0)
-			printf("Fizz");
-		else if (c % 5 == 0)
-			printf("Buzz");
+		if ((num % 3 == 0) && (num % 5 == 0))
+		{
+			printf("FizzBuzz ");
+		}
+		else if ((num % 3) == 0)
+		{
+			printf("Fizz ");
+		}
+		else if ((num % 5) == 0)
+		{
+			printf("Buzz ");
+		}
+		if (num != 100)
+		{
+			printf("Buzz ");
+		}
 		else
-			printf("%d", c);
+		{
+			printf("Buzz");
+		}
 	}
+	else
+		printf("%d ", num);
+
+	printf("\n");
+	return (0);
 }
