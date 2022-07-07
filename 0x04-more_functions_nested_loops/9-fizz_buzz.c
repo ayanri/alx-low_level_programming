@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Fizz Buzz code
+ * main - Fizz, Buzz and FizzBuzz code
  *
  * Return: void
  */
