@@ -1,42 +1,23 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
- *
- * Return: 0
+ * fizz_buzz - Prints to 100
  */
 
-int main(void)
+void fizz_buzz(void)
 {
-	int c = 1;
+	int c;
 
-	while (c <= 100)
+	for (c = 1; c < 100; c++)
 	{
 		if (c % 3 == 0 && c % 5 == 0)
-		{
 			printf("FizzBuzz");
-		}
-
 		else if (c % 3 == 0)
-		{
 			printf("Fizz");
-		}
-
 		else if (c % 5 == 0)
-		{
 			printf("Buzz");
-		}
 		else
-		{
-			printf("%i", c)
-		}
-		if (c != 100)
-		{
-			putchar(' ');
-		}
-
-		c++;
+			printf("%d", c);
 	}
-	putchar('\n');
-	return (0);
 }
