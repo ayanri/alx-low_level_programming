@@ -2,26 +2,25 @@
 #include <stdio.h>
 
 /**
- * main - FizzBuzz code
- *
- * Return: void
+ * fizz_buzz - printing to 100
  */
 
-int main(void)
+void fizz_buzz(void)
 {
-	int i;
+	int x;
 
-	for (i = 1; i <= 100; i++)
+	for (x = 1; x <= 100, x++)
 	{
-		if (i % 15 == 0)
-			printf("FizzBuzz");
-		else if ((i % 3) == 0)
-			printf("Fizz");
-		else if ((i % 5) == 0)
-			printf("Buzz");
+		if (x == 100)
+			printf("Buzz")
+		else if (x % 15 == 0)
+			printf("FizzBuzz ");
+		else if (x % 3 == 0)
+			printf("Fizz ");
+		else if (x % 5 == 0)
+			printf("Buzz ");
 		else
-			printf("%i", i);
+			printf("%d ", x);
 	}
-	_putchar('\n');
-	return (0);
+	printf('\n');
 }
