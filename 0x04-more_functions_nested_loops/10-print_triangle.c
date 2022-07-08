@@ -1,9 +1,9 @@
 #include <main.h>
 
 /**
- * print_triangle - prints a triangle, followed by a new line
- * @size: Integer type
- * Return: void
+ * print_triangle - prints a triangle
+ * @size : integer type
+ * Return:void
  */
 
 void print_triangle(int size)
