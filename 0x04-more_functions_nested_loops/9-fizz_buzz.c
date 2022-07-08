@@ -21,10 +21,7 @@ int main(void)
 			printf("Buzz");
 		else
 			printf("%i", i);
-		if (i != 100)
-			putchar(' ');
-		i++
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
