@@ -1,26 +1,19 @@
 #include <stdio.h>
-#include <math.h>
+
 /**
- * main - prime numbers
- *
- * Return: Always 0.
+ * main - Prints out the larget prime factor of 612852475143
+ * Return: return 0 with success.
  */
 int main(void)
 {
+	long i;
+	long num = 612852475143;
 
-unsigned int long n = 612852475143, a = (int) sqrt(n);
-
-while (1)
-{
-
-	if (n % a == 0)
+	for (i = 2; i < num; i++)
 	{
-		printf("%lu \n", n / a);
-		break;
+		if (num % i == 0)
+			num /= i;
 	}
-	a--;
-
-}
-
-return (0);
+	printf("%li\n", num);
+	return (0);
 }
