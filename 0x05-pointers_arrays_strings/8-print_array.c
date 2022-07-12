@@ -10,20 +10,20 @@
 
 void print_array(int *a, int n)
 {
-	int a;
+	int c;
 
 
 	if (n > 0)
 	{
-		for (a = 0 ; n > a; a++)
+		for (c = 0 ; n > c; c++)
 		{
-			if (a != n - 1)
+			if (c != n - 1)
 			{
-				printf("%d, ", a[a]);
+				printf("%d, ", a[c]);
 			}
 			else
 			{
-				printf("%d", a[a]);
+				printf("%d", a[c]);
 			}
 
 		}
