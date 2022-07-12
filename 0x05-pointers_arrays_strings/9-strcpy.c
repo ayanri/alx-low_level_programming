@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *_strcpy - copies the string pointed to by src
+ * _strcpy - copies the string pointed to by src
  * @dest: char typr string
  * @src: char typr string
  * Description: Copy the string pointed to by pointer `src` to
@@ -16,6 +16,7 @@ char *_strcpy(char *dest, char *src)
 	do {
 		a++;
 		dest[a] = src[a];
-	} while (src[a] != '\0')
+	} while (src[a] != '\0');
+
 	return (dest);
 }
