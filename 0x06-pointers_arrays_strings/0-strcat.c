@@ -1,5 +1,3 @@
-#include <string.h>
-
 /**
  * _strcat - function that concatenates two strings
  * @dest: parameter to be appended to
