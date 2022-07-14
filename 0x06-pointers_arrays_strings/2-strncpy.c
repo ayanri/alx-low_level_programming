@@ -2,8 +2,8 @@
 
 /**
  * _strncpy - function that copies a string
- * @dest: buffer storing the string copy
- * @src: the source string
+ * @dest: pointer to the string copy
+ * @src: pointer to the source string
  * @n: int
  *
  * Return: Destination
