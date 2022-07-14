@@ -1,29 +1,24 @@
+#include <main.h>
+
 /**
  * _strcat - function that concatenates two strings
  * @dest: parameter to be appended to
  * @src: parameter to append to dest
- * n: maximum number of bytes usable
- * Return: Always 0
+ * Return: void
  */
+
 
 char *_strcat(char *dest, char *src)
 {
-	int a = 0;
-	int b = 0;
+	int a = -1, x;
+	for (x = 0; dest[x] != '\0'; x++)
+	;
 
-	while (dest[a] != '\0')
-	{
+	do {
 		a++;
-	}
-
-	while (b < n && src[b] != '\0')
-	{
-		dest[a] += src[b];
-		a++;
-		b++;
-	}
-
-	dest += '\0';
+		dest[x] = src[a];
+		x++;
+	} while (src[a] != '\0');
 
 	return (dest);
 }
