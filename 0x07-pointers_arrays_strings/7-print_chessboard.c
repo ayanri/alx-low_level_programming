@@ -2,7 +2,7 @@
 
 /**
  * print_chessboard - function that prints chessboard
- * @a: the chessboard
+ * @a: the matrix
  */
 
 void print_chessboard(char (*a)[8])
