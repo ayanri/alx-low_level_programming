@@ -4,7 +4,7 @@
 /**
  * main - multiply the arguments
  * @argc: Argument count
- * @argv: Array of argument strings
+ * @argv: rgument array value
  *
  * Return: 0
  */
