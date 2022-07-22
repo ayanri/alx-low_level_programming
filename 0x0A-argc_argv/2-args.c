@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 /**
  * main - prints all arguments it recieves
  * @argc: argument count
- * @argv: argument array value
+ * @argv: argument vector
  *
  * Return: 0 (on success)
  */
