@@ -1,9 +1,7 @@
 #include "main.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * _strlen - find length of a string
+ * _strlen - length of a string
  * @s: string
  *
  * Return: int
@@ -13,10 +11,12 @@ int _strlen(char *s)
 {
 	int a = 0;
 
-	for (; s[a] != '\0'; a++)
+	while (*s != '\0')
 	{
-		return (a);
+		s++;
+		a++
 	}
+	return (a);
 }
 
 /**
@@ -29,27 +29,29 @@ int _strlen(char *s)
 
 char *str_concat(char *s1, char *s2)
 {
-	int a1, a2, x;
-	char *z;
+	unsigned int a1, a2;
+	char *conc, *temp;
 
-	if (s1 == NULL)
-		s1 = "\0";
-	if (s2 == NULL)
-		s2 = "\0";
+	if (!s1)
+		s1 = "";
+	else
+		a1 = _strlen(s1);
 
-	a1 = _strlen(s1);
-	a2 = _strlen(s2);
-	z = malloc((a1 + a2) * sizeof(char) + 1);
-	if (z == 0)
+	if (!s2)
+		s2 = "";
+	else
+		a2 = _strlen(s2);
+
+	conc = malloc(a1 + a2 + 1);
+	if (!conc)
 		return (0);
 
-	for (x = 0; x <= a1 + a2; x++)
-	{
-		if (x < a1)
-			z[x] = s1[x];
-		else
-			z[x] = s2[x - a1];
-	}
-	z[x] = '\0';
-	return (z);
+	tmp = conc;
+	while (*s1)
+		*tmp++ = *s1++;
+
+	while ((*tmp++ = *s2++))
+		;
+
+	return (conc);
 }
