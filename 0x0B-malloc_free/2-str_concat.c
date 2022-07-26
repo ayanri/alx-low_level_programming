@@ -1,57 +1,46 @@
 #include "main.h"
 
 /**
- * _strlen - length of a string
- * @s: string
- *
- * Return: int
- */
-
-int _strlen(char *s)
-{
-	int a = 0;
-
-	while (*s != '\0')
-	{
-		s++;
-		a++
-	}
-	return (a);
-}
-
-/**
- * *str_concat - concatenate two strings
- * @s1: string content 1
- * @s2: string content 2
+ * *str_concat - concatenates two strings
+ * @s1: string1
+ * @s2: string2
  *
  * Return: pointer
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int a1, a2;
-	char *conc, *temp;
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
+	char *s;
 
-	if (!s1)
+	if (s1 == NULL)
 		s1 = "";
-	else
-		a1 = _strlen(s1);
-
-	if (!s2)
+	if (s2 == NULL)
 		s2 = "";
-	else
-		a2 = _strlen(s2);
+	while (s1[a])
+		a++;
+	while (s2[b])
+		b++;
 
-	conc = malloc(a1 + a2 + 1);
-	if (!conc)
-		return (0);
-
-	tmp = conc;
-	while (*s1)
-		*tmp++ = *s1++;
-
-	while ((*tmp++ = *s2++))
-		;
-
-	return (conc);
+	c = a + b;
+	s = (char *)malloc(c * sizeof(char) + 1);
+	if (s == NULL)
+		return (NULL);
+	b = 0;
+	while (d < c)
+	{
+		if (d < a)
+			s[d] = s1[d];
+		if (d >= a)
+		{
+			s[d] = s2[b];
+			b++;
+		}
+		d++;
+	}
+	s[d] = '\0';
+	return (s);
 }
