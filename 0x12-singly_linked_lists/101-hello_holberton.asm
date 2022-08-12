@@ -12,7 +12,7 @@ main:
 
 		mov 	rax, 0
 		mov	rdi,format
-		mov	rdi,message
+		mov	rsi,message
 		call	printf
 
 		pop	rbp
